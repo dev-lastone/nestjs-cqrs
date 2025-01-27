@@ -10,4 +10,8 @@ export class HeroRepository {
     this.heroRepo.set(id, hero);
     return hero;
   }
+
+  async findAll(): Promise<Hero[]> {
+    return Array.from(this.heroRepo.values());
+  }
 }
